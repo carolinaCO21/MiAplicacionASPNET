@@ -1,0 +1,26 @@
+﻿@using u6.Models // Para usar FilaMultiplicacion
+@model List<List<FilaMultiplicacion>>
+@{
+    ViewData["Title"] = "Tabla de Multiplicaciones";
+}
+
+<h1>Multiplicacion</h1>
+
+<h1>Tabla de Multiplicaciones (Ejercicio 4 - Razor)</h1>
+<hr />
+
+<div style="display: flex; flex-wrap: wrap;">
+    @foreach (var columna in Model)
+    {
+        <div style="border: 1px solid #ccc; padding: 10px; margin: 5px; width: 120px; font-family: monospace;">
+            @foreach (var fila in columna)
+            {
+                <p style="margin: 0; padding: 2px 0;">@fila.ToString()</p>
+            }
+        </div>
+    }
+</div>
+
+<p style="margin-top: 20px;">
+    @Html.ActionLink("Volver al Inicio", "Index", "Home")
+</p>

@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model DateTime
+
+@{
+    ViewData["Title"] = "Ejercicio 3: Hora Actual";
+}
+
+<h1>Hora Actual (Ejercicio 3 - Razor)</h1>
+<hr />
+
+@{
+    // Usamos C# directamente en Razor
+    var hora = Model.ToString("hh:mm");
+    var esPM = Model.Hour >= 12;
+    var mensajeTarde = esPM ? "Sí, hemos pasado de las 12 del mediodía." : "No, aún no hemos pasado de las 12 del mediodía.";
+}
+
+<h2>Hola, son las @hora</h2>
+
+<p>@mensajeTarde</p>
+
+<p>
+    @Html.ActionLink("Volver al Inicio", "Index", "Home")
+</p>

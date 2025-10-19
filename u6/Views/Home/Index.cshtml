@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p>(Ejercicio 1)</p>
+    <h1 class="display-4">Hola mundo</h1>
+    <br/>
+    <br/>
+    <h3>Enlaces</h3>
+    <ul>
+        <li>
+            @Html.ActionLink("Ir al Listado de Productos (Ejercicio 2)", "ListadoProductos", "Productos")
+        </li>
+        <li>
+            @Html.ActionLink("Ir a la Vista de la Hora (Ejercicio 3)", "Hora", "Home")
+        </li>
+        <li>
+            @Html.ActionLink("Ir a la Tabla de Multiplicaciones (Ejercicio 4)", "Multiplicacion", "Home")
+        </li>
+    </ul>
+
+</div>
