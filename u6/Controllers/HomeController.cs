@@ -33,7 +33,7 @@ namespace u6.Controllers
             return View(DateTime.Now);
         }
         // -----------------------------------------------------------------
-        // EJERCICIO 4: Tabla de Multiplicaciones (Usa el Service)
+        // EJERCICIO 4: Tabla de Multiplicaciones Usa el Service
         // -----------------------------------------------------------------
         public IActionResult Multiplicacion()
         {
