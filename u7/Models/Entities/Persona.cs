@@ -12,15 +12,11 @@ namespace u7.Models.Entities
         public string Surname { get; set; }
 
         // Constructor por defecto (Corregido el error de escritura)
-        public Persona()
+       
+
+        public Persona(int id, string name, string surname)
         {
-            // Opcional: inicialización de propiedades aquí si no se hace arriba
-        }
-
-
-        public Persona(string name, string surname)
-        {
-
+            this.Id = id;
             this.Name = name;
             this.Surname = surname;
         }
