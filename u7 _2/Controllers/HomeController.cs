@@ -24,23 +24,24 @@ namespace u7.Controllers
         {
              DateTime fechaActual = DateTime.Now;
 
-          
+            // 1. Obtener los datos de la entidad Persona
             Persona miPersona = _repoPersona.GetPersonaSimulada();
 
-           
+            // 2. Asignar el Saludo a ViewData
             ViewData["Saludo"] = ObtenerSaludoSegunHora(fechaActual);
 
-           
+            // 3. Asignar la Fecha Larga a ViewBag
+            // (ViewBag es dinámico y usa la clave como propiedad, ej: ViewBag.FechaActual)
             ViewBag.FechaActual = fechaActual.ToString("D", new CultureInfo("es-ES"));
 
- 
+            // 4. Crear una instancia del ViewModel SOLO con la entidad Persona
             PersonaViewModel miViewModel = new PersonaViewModel
             {
-                
+                // Ya no asignamos Saludo ni FechaActual aquí.
                 DatosPersona = miPersona
             };
 
-   
+            // 5. Pasar el ViewModel (que ahora solo contiene la Persona) a la vista
             return View(miViewModel);
 
 

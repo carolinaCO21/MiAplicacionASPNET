@@ -1,0 +1,48 @@
+﻿@{
+   ViewData["Title"] = "Home Page";
+}
+
+@* 1. Especificar el tipo de modelo que espera esta vista *@
+@model u7.Models.ViewModels.PersonaViewModel
+
+
+<div class="text-center">
+    
+    @* 2. Acceder al Saludo usando la propiedad Saludo del ViewModel 
+    <h1 class="display-4">@Model.Saludo, @Model.DatosPersona.Name</h1>*@
+
+    @* 3. Acceder a la Fecha Larga usando la propiedad FechaActual del ViewModel 
+    <p class="lead">Hoy es: <strong>@Model.FechaActual</strong></p>*@
+
+    @* 1. ACCESO AL SALUDO: Usar ViewData["Saludo"] *@
+    
+    <h1 class="display-4">@ViewData["Saludo"], @Model.DatosPersona.Name</h1>
+
+    @* 2. ACCESO A LA FECHA: Usar ViewBag.FechaActual *@
+    <p class="lead">Hoy es: <strong>@ViewBag.FechaActual</strong></p>
+    <hr />
+
+    <h2>Detalles de la Persona</h2>
+
+    <div class="card p-3 mx-auto" style="max-width: 400px; text-align: left;">
+        <dl class="row">
+
+            <dt class="col-sm-4">ID:</dt>
+            <dd class="col-sm-8">@Model.DatosPersona.Id</dd>
+
+            <dt class="col-sm-4">Edad:</dt>
+            <dd class="col-sm-8">@Model.DatosPersona.Name</dd>
+
+            <dt class="col-sm-4">Email:</dt>
+            <dd class="col-sm-8">@Model.DatosPersona.Surname</dd>
+
+            @* Puedes seguir agregando más propiedades de la entidad Persona aquí *@
+
+        </dl>
+    </div>
+</div>
+
+
+   
+
+
